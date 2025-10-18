@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.profile .info {
+    flex: 1;
+}
+
+.profile h2 {
+    margin: 0;
+    color: #1e40af;
+    font-size: 1.5em;
+}
+
+.profile p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.profile .visit-button {
+    background-color: #4ade80;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact {
+    background-color: #1e40af;
+    color: white;
+    padding: 20px;
+}
+
+.contact h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.contact .map-button {
+    background-color: #4ade80;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    background-color: #bfdbfe;
+    padding: 20px;
+}
+
+.quote .quote-text {
+    flex: 1;
+    position: relative;
+}
+
+.quote .quote-mark {
+    font-size: 4em;
+    color: white;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+.quote blockquote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.quote p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.quote img {
+    width: 200px;
+    height: auto;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-left: 20px;
+}
+
+.explore {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+}
+
+.explore h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.explore p {
+    margin: 0 0 10px;
+}
+
+.explore .search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.explore input {
+    padding: 10px;
+    border: none;
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+.explore .go-button {
+    background-color: #4ade80;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* ✅ Container to push quote + explore to the right side */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* pushes content to the right */
+}
+
+/* Keep sections the same width but right-aligned visually */
+.right-column .quote,
+.right-column .explore {
+    width: 70%; /* adjust this number to control how far right */
+}
+
+/* Optional: make responsive for small screens */
+@media (max-width: 768px) {
+    .right-column {
+        align-items: center;
+    }
+    .right-column .quote,
+    .right-column .explore {
+        width: 100%;
+    }
+}
+/* ===== Two-column layout ===== */
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left and right columns */
+.left-column {
+    flex: 1;
+    min-width: 55%;
+}
+
+.right-column {
+    flex: 0 0 40%;   /* fixed column width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Make it responsive on smaller screens */
+@media (max-width: 768px) {
+    .two-column {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        flex: 1 1 100%;
+    }
+}
+
